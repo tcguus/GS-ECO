@@ -12,7 +12,10 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en">
+        <html lang="pt-br">
+            <head>
+                <title>Eco+</title>
+            </head>
             <body className={figtree.className}>{children}</body>
         </html>
     );

@@ -1,11 +1,11 @@
 "use client";
 
+import Header from "../components/Header/Header";
+
 const Home = () => {
-
-
     return (
         <div>
-          oiasdasdas
+          <Header />
         </div>
     );
 };
