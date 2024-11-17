@@ -4,6 +4,7 @@ import { FaLeaf } from "react-icons/fa";
 import Link from "next/link";
 import { IoIosFlash } from "react-icons/io";
 import { IoHardwareChip } from "react-icons/io5";
+import Footer from "../components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -84,7 +85,9 @@ const Home = () => {
 </div>
         </div>
       </div>
+      <Footer />
     </div>
+    
   );
 };
 
