@@ -31,20 +31,20 @@ export default function Header() {
         </li>
         <li
           className={`transform transition-transform hover:text-verde hover:scale-110 ${
-            pathname === "/integrantes" ? "text-verde underline" : ""
-          }`}
-        >
-          <Link href="/integrantes" rel="noopener noreferrer">
-            Integrantes
-          </Link>
-        </li>
-        <li
-          className={`transform transition-transform hover:text-verde hover:scale-110 ${
             pathname === "/sunbox" ? "text-verde underline" : ""
           }`}
         >
           <Link href="/sunbox" rel="noopener noreferrer">
             Minha SUNBOX
+          </Link>
+        </li>
+        <li
+          className={`transform transition-transform hover:text-verde hover:scale-110 ${
+            pathname === "/integrantes" ? "text-verde underline" : ""
+          }`}
+        >
+          <Link href="/integrantes" rel="noopener noreferrer">
+            Integrantes
           </Link>
         </li>
       </nav>

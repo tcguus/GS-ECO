@@ -31,7 +31,7 @@ const Home = () => {
           PRINCIPAIS VANTAGENS
         </h1>
         <div className="w-full h-aut mt-[5.5rem] flex justify-evenly">
-        <div className="flex flex-col">
+        <div className="items-start flex flex-col justify-center left-0">
   <p className="text-2xl w-[25rem] leading-relaxed mb-auto">
     A Sunbox é uma caixa inovadora que{" "}
     <span className="font-semibold">armazena energia solar</span>,
@@ -43,10 +43,10 @@ const Home = () => {
   </p>
   <Link
     href="/compras"
-    className="bg-verde pl-5 pr-5 pt-1 pb-1 text-2xl font-bold rounded-3xl inline-flex items-center justify-center tracking-[0.1em] hover:scale-110 transform transition-transform hover:text-white"
+    className="bg-verde pl-5 pr-5 pt-1 pb-1 text-2xl font-bold rounded-3xl tracking-[0.1em] hover:scale-110 transform transition-transform hover:text-white"
   >
     Compre agora!
-  </Link>
+    </Link>
 </div>
         <div className="flex flex-col gap-14">
   <div className="flex items-center gap-5">
