@@ -21,7 +21,7 @@ export default function Header() {
           </Link>
         </li>
         <li
-          className={`transform transition-transform hover:scale-110 ${
+          className={`transform transition-transform hover:text-verde hover:scale-110 ${
             pathname === "/compras" ? "text-verde underline" : ""
           }`}
         >
@@ -30,7 +30,7 @@ export default function Header() {
           </Link>
         </li>
         <li
-          className={`transform transition-transform hover:scale-110 ${
+          className={`transform transition-transform hover:text-verde hover:scale-110 ${
             pathname === "/integrantes" ? "text-verde underline" : ""
           }`}
         >
@@ -39,12 +39,12 @@ export default function Header() {
           </Link>
         </li>
         <li
-          className={`transform transition-transform hover:scale-110 ${
+          className={`transform transition-transform hover:text-verde hover:scale-110 ${
             pathname === "/sunbox" ? "text-verde underline" : ""
           }`}
         >
           <Link href="/sunbox" rel="noopener noreferrer">
-            Minha SunBox
+            Minha SUNBOX
           </Link>
         </li>
       </nav>
