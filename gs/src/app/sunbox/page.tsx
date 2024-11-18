@@ -86,14 +86,14 @@ export default function Sunbox() {
       >
         <div className="w-[calc(50%-0.5px)] h-[calc(100vh-112px)] items-start flex flex-col justify-center left-0 gap-4">
           <p className="w-[45rem] ml-[4.5rem] text-lg">
-            Na parte traseira da sua Sunbox, você encontrará um{" "}
+            Na parte traseira da sua SUNBOX, você encontrará um{" "}
             <span className="font-bold">código identificador exclusivo</span>
             . Com esse código, é possível acessar informações detalhadas sobre o
             dispositivo, como a porcentagem atual de bateria, a data de
             fabricação, e outros dados importantes para acompanhamento e
             manutenção. <br />{" "}
             <span className="font-bold">
-              Sua Sunbox conectada e sempre sob seu controle!
+              Sua SUNBOX conectada e sempre sob seu controle!
             </span>
           </p>
           <Image
@@ -125,7 +125,7 @@ export default function Sunbox() {
         </div>
         <div className="w-[1px] h-[calc(90vh-112px)] bg-gray-300"></div>
         <div className="w-[calc(50%-0.5px)] h-[calc(100vh-112px)] flex flex-col justify-center gap-12">
-        <h1 className="flex ml-auto mr-auto text-6xl relative after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#17EB26] after:absolute after:bottom-[-2px]">Status da sua SUNBOX</h1>
+        <h1 className="flex ml-[4.5rem] mr-auto text-6xl relative after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#17EB26] after:absolute after:bottom-[-2px]">Status da sua SUNBOX</h1>
           <div className="mt-4 ml-[4.5rem] flex flex-col gap-5">
             <p>
               <strong>Código-identificador:</strong> {deviceData?.identifier}

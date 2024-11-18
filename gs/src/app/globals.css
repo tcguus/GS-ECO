@@ -12,3 +12,7 @@ body{
     text-decoration: underline;
     text-underline-offset: 4px;
   }
+
+.border-verde {
+    border-color: #17EB26;
+  }
