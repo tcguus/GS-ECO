@@ -147,8 +147,115 @@ export default function Compras() {
             </div>
           </div>
         </div>
-        <div id="compra" className="mt-20 w-full bg-cinza h-auto">
-          <div className="ml-[55px] mt-[50px] mb-[8px] w-[25rem] flex flex-col items-start left-0 gap-2 text-xl">
+        <div
+          id="compra"
+          className="mt-20 w-full bg-cinza h-auto flex justify-evenly"
+        >
+          <div className="mt-[50px] mb-[50px] w-auto flex flex-col">
+            {selectedBox === "P" && (
+              <div>
+                <h1 className="font-semibold text-2xl">
+                  Mais informações sobre a SUNBOX P
+                </h1>
+                <p>
+                  <span className="font-semibold">- Dimensões:</span> o tamanho
+                  P é o mais compacto da linha SUNBOX, tendo 35cm de largura{" "}
+                  <br /> e 45cm de altura.
+                </p>
+                <p>
+                  <span className="font-semibold">- Peso:</span> 8kg, leve e
+                  portátil.
+                </p>
+                <p>
+                  <span className="font-semibold">- Painel solar:</span> 100W
+                </p>
+                <p>
+                  <span className="font-semibold">
+                    - Capacidade da bateria:
+                  </span>{" "}
+                  500Wh
+                </p>
+                <p>
+                  <span className="font-semibold">- Ideal para:</span> carregar
+                  celulares e pequenos dispositivos elétricos.
+                </p>
+                <p>
+                  <span className="font-semibold">- Saídas de energia:</span>{" "}
+                  <br /> - 4 portas USB <br />- 2 portas UBS-C <br />- 2 tomadas
+                  bivolt
+                </p>
+              </div>
+            )}
+            {selectedBox === "M" && (
+              <div>
+                <h1 className="font-semibold text-2xl">
+                  Mais informações sobre a SUNBOX M
+                </h1>
+                <p>
+                  <span className="font-semibold">- Dimensões:</span> o tamanho
+                  M é o intermediario da linha SUNBOX, tendo 60cm de largura{" "}
+                  <br /> e 45cm de altura.
+                </p>
+                <p>
+                  <span className="font-semibold">- Peso:</span> 13kg, portátil
+                  mas com maior capacidade.
+                </p>
+                <p>
+                  <span className="font-semibold">- Painel solar:</span> 250W
+                </p>
+                <p>
+                  <span className="font-semibold">
+                    - Capacidade da bateria:
+                  </span>{" "}
+                  1300Wh
+                </p>
+                <p>
+                  <span className="font-semibold">- Ideal para:</span> carregar
+                  laptops, pequenos ventiladores e eletrodomésticos <br /> de
+                  baixo consumo.
+                </p>
+                <p>
+                  <span className="font-semibold">- Saídas de energia:</span>{" "}
+                  <br /> - 6 portas USB <br />- 4 portas UBS-C <br />- 4 tomadas
+                  bivolt
+                </p>
+              </div>
+            )}
+            {selectedBox === "G" && (
+              <div>
+                <h1 className="font-semibold text-2xl">
+                  Mais informações sobre a SUNBOX G
+                </h1>
+                <p>
+                  <span className="font-semibold">- Dimensões:</span> o tamanho
+                  G é o maior e mais completo da linha SUNBOX, tendo 95cm de largura 
+                  <br /> e 70cm de altura.
+                </p>
+                <p>
+                  <span className="font-semibold">- Peso:</span> 22kg, requer instalação fixa ou semi-fixa.
+                  
+                </p>
+                <p>
+                  <span className="font-semibold">- Painel solar:</span> 500W
+                </p>
+                <p>
+                  <span className="font-semibold">
+                    - Capacidade da bateria:
+                  </span>
+                  3500Wh
+                </p>
+                <p>
+                  <span className="font-semibold">- Ideal para:</span> fornecer energia para pequenos sistemas elétricos domésticos, como geladeiras <br /> compactas, TVs maiores e computadores de mesa,
+                </p>
+                <p>
+                  <span className="font-semibold">- Saídas de energia:</span>
+                  <br /> - 8 portas USB <br />- 6 portas UBS-C <br />- 8 tomadas
+                  bivolt <br />
+                </p>
+              </div>
+            )}
+          </div>
+          <div className="mt-auto mb-auto w-[17rem] h-[14.65rem] flex flex-col items-start left-0 gap-2 text-xl">
             <h3>Quantidade de cada tamanho:</h3>
             <div className="flex gap-2 border border-black pr-2 rounded-lg min-w-[220px] max-w-[auto]">
               <button
@@ -201,89 +308,91 @@ export default function Compras() {
             <p className="text-2xl font-semibold">
               Preço total: R$ {totalPrice}
             </p>
-          </div>
-          <div>
-            <button
-              className={`ml-[55px] mb-[50px] ${
-                isAnyQuantitySelected ? "bg-verde" : "bg-green-300"
-              } text-white py-2 px-4 rounded`}
-              disabled={!isAnyQuantitySelected}
-              onClick={() => setShowPayment(true)}
-            >
-              Finalizar Compra
-            </button>
-            {showPayment && (
-              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                <div className="bg-white p-8 rounded shadow-lg relative flex flex-col items-start">
-                  <button
-                    className="absolute top-2 right-3 text-gray-500 hover:text-red-500"
-                    onClick={() => setShowPayment(false)}
-                  >
-                    X
-                  </button>
-                  <h2 className="text-xl font-semibold mb-4">
-                    Selecione o método de pagamento:
-                  </h2>
-                  <div className="flex flex-col space-y-2 items-start left-0">
-                    <label>
-                      <input
-                        type="radio"
-                        name="payment"
-                        value="credit"
-                        onChange={(e) => setPaymentMethod(e.target.value)}
-                        className="mr-2"
-                      />
-                      Cartão de Crédito
-                    </label>
-                    <label>
-                      <input
-                        type="radio"
-                        name="payment"
-                        value="debit"
-                        onChange={(e) => setPaymentMethod(e.target.value)}
-                        className="mr-2"
-                      />
-                      Cartão de Débito
-                    </label>
-                    <label>
-                      <input
-                        type="radio"
-                        name="payment"
-                        value="pix"
-                        onChange={(e) => setPaymentMethod(e.target.value)}
-                        className="mr-2"
-                      />
-                      Pix
-                    </label>
+            <div>
+              <button
+                className={`] ${
+                  isAnyQuantitySelected ? "bg-verde" : "bg-green-300"
+                } text-white py-2 px-4 rounded`}
+                disabled={!isAnyQuantitySelected}
+                onClick={() => setShowPayment(true)}
+              >
+                Finalizar Compra
+              </button>
+              {showPayment && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                  <div className="bg-white p-8 rounded shadow-lg relative flex flex-col items-start">
+                    <button
+                      className="absolute top-2 right-3 text-gray-500 hover:text-red-500"
+                      onClick={() => setShowPayment(false)}
+                    >
+                      X
+                    </button>
+                    <h2 className="text-xl font-semibold mb-4">
+                      Selecione o método de pagamento:
+                    </h2>
+                    <div className="flex flex-col space-y-2 items-start left-0">
+                      <label>
+                        <input
+                          type="radio"
+                          name="payment"
+                          value="credit"
+                          onChange={(e) => setPaymentMethod(e.target.value)}
+                          className="mr-2"
+                        />
+                        Cartão de Crédito
+                      </label>
+                      <label>
+                        <input
+                          type="radio"
+                          name="payment"
+                          value="debit"
+                          onChange={(e) => setPaymentMethod(e.target.value)}
+                          className="mr-2"
+                        />
+                        Cartão de Débito
+                      </label>
+                      <label>
+                        <input
+                          type="radio"
+                          name="payment"
+                          value="pix"
+                          onChange={(e) => setPaymentMethod(e.target.value)}
+                          className="mr-2"
+                        />
+                        Pix
+                      </label>
+                    </div>
+                    <button
+                      className={`mt-4 mr-auto ml-auto ${
+                        paymentMethod ? "bg-verde" : "bg-green-300"
+                      } text-white py-2 px-4 rounded`}
+                      disabled={!paymentMethod}
+                      onClick={handlePurchase}
+                    >
+                      Comprar!
+                    </button>
                   </div>
-                  <button
-                    className={`mt-4 mr-auto ml-auto ${
-                      paymentMethod ? "bg-verde" : "bg-green-300"
-                    } text-white py-2 px-4 rounded`}
-                    disabled={!paymentMethod}
-                    onClick={handlePurchase}
-                  >
-                    Comprar!
-                  </button>
                 </div>
-              </div>
-            )}
-            {loading && (
-              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                <div className="bg-white p-4 rounded shadow-lg">
-                  <p className="text-xl font-semibold">Finalizando compra...</p>
+              )}
+              {loading && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                  <div className="bg-white p-4 rounded shadow-lg">
+                    <p className="text-xl font-semibold">
+                      Finalizando compra...
+                    </p>
+                  </div>
                 </div>
-              </div>
-            )}
-            {showSuccessMessage && (
-              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                <div className="bg-white p-4 rounded shadow-lg">
-                  <p className="text-xl font-semibold">
-                    Compra realizada com sucesso!
-                  </p>
+              )}
+              {showSuccessMessage && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                  <div className="bg-white p-4 rounded shadow-lg">
+                    <p className="text-xl font-semibold">
+                      Compra realizada com sucesso!
+                    </p>
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </div>
       </div>

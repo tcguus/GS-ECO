@@ -89,8 +89,8 @@ export default function Sunbox() {
             Na parte traseira da sua SUNBOX, você encontrará um{" "}
             <span className="font-bold">código identificador exclusivo</span>
             . Com esse código, é possível acessar informações detalhadas sobre o
-            dispositivo, como a porcentagem atual de bateria, a data de
-            fabricação, e outros dados importantes para acompanhamento e
+            dispositivo, como a porcentagem atual de bateria, última atualização do sistema,
+             e outros dados importantes para acompanhamento e
             manutenção. <br />{" "}
             <span className="font-bold">
               Sua SUNBOX conectada e sempre sob seu controle!
