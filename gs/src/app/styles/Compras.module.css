@@ -1,0 +1,161 @@
+.container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.novo {
+  color: #17eb26;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-left: 5rem;
+  margin-top: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+.title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-left: 5rem;
+  margin-bottom: 0.5rem;
+}
+.sunbox {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image {
+  margin-top: 3.5rem;
+  transition: transform 0.5s ease-in-out;
+}
+.sizes {
+  margin-left: 5rem;
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+  left: 0;
+}
+.size {
+  padding-left: 0.5rem;
+  padding-top: 1.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  border-width: 1px;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+}
+.divInfo {
+  margin-top: 5rem;
+  width: 100%;
+  background-color: #f0f0f0;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.moreInfo {
+  position: relative;
+  background-color: #f0f0f0;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0.5rem;
+  width: 17rem;
+}
+.arrowDown {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+.arrowDown:hover {
+  color: #17eb26;
+}
+.infos {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+.buy {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 17rem;
+  height: 14.65rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  left: 0;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+}
+.quantities {
+  display: flex;
+  gap: 0.5rem;
+  border: 1px solid black;
+  padding-right: 0.5rem;
+  border-radius: 0.5rem;
+  min-width: 220px;
+  max-width: auto;
+}
+.payment {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.method {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.xButton {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  color: #6b7280;
+}
+.xButton:hover {
+  color: red;
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  left: 0;
+}
+.loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.divLoading {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}

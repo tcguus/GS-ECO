@@ -5,6 +5,7 @@ import Header from "../../components/Header/Header";
 import Image from "next/image";
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import styles from "../styles/Compras.module.css";
 
 export default function Compras() {
   const [selectedBox, setSelectedBox] = useState<"P" | "M" | "G">("P");
@@ -88,25 +89,21 @@ export default function Compras() {
   return (
     <div>
       <Header />
-      <div className="h-auto flex flex-col">
-        <h2 className="text-verde font-semibold text-xl ml-20 mt-14 mb-2">
-          Novo
-        </h2>
-        <h1 className="text-4xl font-semibold ml-20 mb-2">
-          {boxDetails[selectedBox].title}
-        </h1>
+      <div className={styles.container}>
+        <h2 className={styles.novo}>Novo</h2>
+        <h1 className={styles.title}>{boxDetails[selectedBox].title}</h1>
         <p className="ml-20">R$ {boxDetails[selectedBox].price}</p>
-        <div className="w-full h-auto flex items-center justify-center">
+        <div className={styles.sunbox}>
           <Image
             src={boxDetails[selectedBox].imageSrc}
             width="900"
             height="750"
-            alt={`Id SunBox ${selectedBox}`}
-            className=" mt-14 transition-transform duration-500 ease-in-out"
+            alt={Id SunBox ${selectedBox}}
+            className={styles.image}
           />
-          <div className="ml-20 mt-14 flex flex-col gap-8 items-start left-0">
+          <div className={styles.sizes}>
             <button
-              className={`pl-2 pt-6 pr-2 pb-6 flex items-center mr-4 border-[1px] rounded-2xl text-xl ${
+              className={`${styles.size} ${
                 selectedBox === "P"
                   ? "font-bold border-4 border-verde"
                   : "border-[1px] border-black"
@@ -116,7 +113,7 @@ export default function Compras() {
               SUNBOX P <p className="ml-20 font-light text-sm">Por R$1.499</p>
             </button>
             <button
-              className={`pl-2 pt-6 pr-2 pb-6 flex items-center mr-4 border-[1px] rounded-2xl text-xl ${
+              className={`${styles.size} ${
                 selectedBox === "M"
                   ? "font-bold border-4 border-verde"
                   : "border-2 border-black"
@@ -126,7 +123,7 @@ export default function Compras() {
               SUNBOX M <p className="ml-20 font-light text-sm">Por R$3.699</p>
             </button>
             <button
-              className={`pl-2 pt-6 pr-2 pb-6 flex items-center mr-4 border-[1px] rounded-2xl text-xl ${
+              className={`${styles.size} ${
                 selectedBox === "G"
                   ? "font-bold border-4 border-verde"
                   : "border-2 border-black"
@@ -135,13 +132,13 @@ export default function Compras() {
             >
               SUNBOX G <p className="ml-20 font-light text-sm">Por R$9.499</p>
             </button>
-            <div className="relative bg-cinza pl-3 pr-3 pt-4 pb-4 rounded-lg w-[17rem]">
+            <div className={styles.moreInfo}>
               <p className="font-medium">
                 Quer saber mais informações <br /> da SUNBOX?
               </p>
               <p className="text-sm">Confira mais detalhes abaixo!</p>
               <IoIosArrowDown
-                className="absolute bottom-3 right-3 transition-colors duration-300 cursor-pointer hover:text-verde"
+                className={styles.arrowDown}
                 onClick={handleScrollToCompra}
               />
             </div>
@@ -149,9 +146,9 @@ export default function Compras() {
         </div>
         <div
           id="compra"
-          className="mt-20 w-full bg-cinza h-auto flex justify-evenly"
+          className={styles.divInfo}
         >
-          <div className="mt-[50px] mb-[50px] w-auto flex flex-col">
+          <div className={styles.infos}>
             {selectedBox === "P" && (
               <div>
                 <h1 className="font-semibold text-2xl">
@@ -228,12 +225,13 @@ export default function Compras() {
                 </h1>
                 <p>
                   <span className="font-semibold">- Dimensões:</span> o tamanho
-                  G é o maior e mais completo da linha SUNBOX, tendo 95cm de largura 
+                  G é o maior e mais completo da linha SUNBOX, tendo 95cm de
+                  largura
                   <br /> e 70cm de altura.
                 </p>
                 <p>
-                  <span className="font-semibold">- Peso:</span> 22kg, requer instalação fixa ou semi-fixa.
-                  
+                  <span className="font-semibold">- Peso:</span> 22kg, requer
+                  instalação fixa ou semi-fixa.
                 </p>
                 <p>
                   <span className="font-semibold">- Painel solar:</span> 500W
@@ -245,7 +243,10 @@ export default function Compras() {
                   3500Wh
                 </p>
                 <p>
-                  <span className="font-semibold">- Ideal para:</span> fornecer energia para pequenos sistemas elétricos domésticos, como geladeiras <br /> compactas, TVs maiores e computadores de mesa,
+                  <span className="font-semibold">- Ideal para:</span> fornecer
+                  energia para pequenos sistemas elétricos domésticos, como
+                  geladeiras <br /> compactas, TVs maiores e computadores de
+                  mesa,
                 </p>
                 <p>
                   <span className="font-semibold">- Saídas de energia:</span>
@@ -255,9 +256,9 @@ export default function Compras() {
               </div>
             )}
           </div>
-          <div className="mt-auto mb-auto w-[17rem] h-[14.65rem] flex flex-col items-start left-0 gap-2 text-xl">
+          <div className={styles.buy}>
             <h3>Quantidade de cada tamanho:</h3>
-            <div className="flex gap-2 border border-black pr-2 rounded-lg min-w-[220px] max-w-[auto]">
+            <div className={styles.quantities}>
               <button
                 className="bg-black text-white rounded-l-md pl-2 pr-2"
                 onClick={() => decrementQuantity("P")}
@@ -273,7 +274,7 @@ export default function Compras() {
               </button>
               <span className="flex mr-auto ml-auto"> SUNBOX P</span>
             </div>
-            <div className="flex gap-2 border border-black pr-2 rounded-lg min-w-[220px] max-w-[auto]">
+            <div className={styles.quantities}>
               <button
                 className="bg-black text-white rounded-l-md pl-2 pr-2"
                 onClick={() => decrementQuantity("M")}
@@ -289,7 +290,7 @@ export default function Compras() {
               </button>
               <span className="flex mr-auto ml-auto"> SUNBOX M</span>
             </div>
-            <div className="flex gap-2 border border-black pr-2 rounded-lg min-w-[220px] max-w-[auto]">
+            <div className={styles.quantities}>
               <button
                 className="bg-black text-white rounded-l-md pl-2 pr-2"
                 onClick={() => decrementQuantity("G")}
@@ -319,10 +320,10 @@ export default function Compras() {
                 Finalizar Compra
               </button>
               {showPayment && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                  <div className="bg-white p-8 rounded shadow-lg relative flex flex-col items-start">
+                <div className={styles.payment}>
+                  <div className={styles.method}>
                     <button
-                      className="absolute top-2 right-3 text-gray-500 hover:text-red-500"
+                      className={styles.xButton}
                       onClick={() => setShowPayment(false)}
                     >
                       X
@@ -330,7 +331,7 @@ export default function Compras() {
                     <h2 className="text-xl font-semibold mb-4">
                       Selecione o método de pagamento:
                     </h2>
-                    <div className="flex flex-col space-y-2 items-start left-0">
+                    <div className={styles.options}>
                       <label>
                         <input
                           type="radio"
@@ -375,8 +376,8 @@ export default function Compras() {
                 </div>
               )}
               {loading && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                  <div className="bg-white p-4 rounded shadow-lg">
+                <div className={styles.loading}>
+                  <div className={styles.divLoading}>
                     <p className="text-xl font-semibold">
                       Finalizando compra...
                     </p>
@@ -384,8 +385,8 @@ export default function Compras() {
                 </div>
               )}
               {showSuccessMessage && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                  <div className="bg-white p-4 rounded shadow-lg">
+                <div className={styles.loading}>
+                  <div className={styles.divLoading}>
                     <p className="text-xl font-semibold">
                       Compra realizada com sucesso!
                     </p>
