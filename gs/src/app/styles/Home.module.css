@@ -1,0 +1,127 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cont {
+  position: relative;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.leaf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #17eb26;
+  font-size: 3rem;
+}
+.title {
+  position: absolute;
+  bottom: 340px;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  color: black;
+  z-index: 0;
+}
+.image {
+  position: relative;
+  top: 1.25rem;
+  z-index: 10;
+}
+.frase {
+  position: absolute;
+  width: 100%;
+  bottom: 2.5rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: black;
+  z-index: 0;
+}
+.contVant {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #e8e8e8;
+  height: 40rem;
+  border-top-right-radius: 60px;
+  border-top-left-radius: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.25rem;
+}
+.titleVant {
+  margin-top: 5.5rem;
+  font-size: 45px;
+  font-weight: 600;
+}
+.divVant {
+  width: 100%;
+  height: auto;
+  margin-top: 5.5rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.textVant {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  left: 0;
+}
+.text {
+  font-size: 1.5rem;
+  width: 25rem;
+  line-height: 1.75;
+  margin-bottom: auto;
+}
+.button {
+  background-color: #17eb26;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 1.5rem;
+  letter-spacing: 0.1em;
+  transition: transform 0.3s;
+}
+.button:hover {
+  transform: scale(1.1);
+  color: white;
+}
+.divFrases {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+.divFrase {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.divIcon {
+  background-color: white;
+  display: inline-flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  font-size: 2.25rem;
+  margin: 0.75rem;
+  color: #17eb26;
+}
