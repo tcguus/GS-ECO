@@ -4,6 +4,7 @@ import Footer from "@/components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Image from "next/image";
 import { useState } from "react";
+import style from "../styles/Sunbox.module.css";
 
 export default function Sunbox() {
   const [inputValue, setInputValue] = useState("");
@@ -72,25 +73,21 @@ export default function Sunbox() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen relative">
+    <div className={style.container}>
       {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="w-16 h-16 border-4 border-green-500 border-t-transparent border-solid rounded-full animate-spin"></div>
+        <div className={style.loading}>
+          <div className={style.circle}></div>
         </div>
       )}
       <Header />
-      <div
-        className={`flex flex-grow w-full h-auto items-center ${
-          isLoading ? "blur-sm" : ""
-        }`}
-      >
-        <div className="w-[calc(50%-0.5px)] h-[calc(100vh-112px)] items-start flex flex-col justify-center left-0 gap-4">
-          <p className="w-[45rem] ml-[4.5rem] text-lg">
+      <div className={`${style.cont} ${isLoading ? "blur-sm" : ""}`}>
+        <div className={style.divId}>
+          <p className={style.text}>
             Na parte traseira da sua SUNBOX, você encontrará um{" "}
             <span className="font-bold">código identificador exclusivo</span>
             . Com esse código, é possível acessar informações detalhadas sobre o
-            dispositivo, como a porcentagem atual de bateria, última atualização do sistema,
-             e outros dados importantes para acompanhamento e
+            dispositivo, como a porcentagem atual de bateria, última atualização
+            do sistema, e outros dados importantes para acompanhamento e
             manutenção. <br />{" "}
             <span className="font-bold">
               Sua SUNBOX conectada e sempre sob seu controle!
@@ -103,30 +100,27 @@ export default function Sunbox() {
             alt="Id SunBox"
             className="ml-[4rem]"
           />
-          <form
-            onSubmit={handleSubmit}
-            className="flex items-center ml-[4.5rem] gap-5"
-          >
+          <form onSubmit={handleSubmit} className={style.formulario}>
             <input
               type="text"
               placeholder="XXXXX-00"
               value={inputValue}
               onChange={handleInputChange}
-              className="p-2 w-[6.5rem] border rounded-lg border-black focus:outline-none focus:ring-2 focus:ring-green-500"
+              className={style.input}
             />
             <button
               type="submit"
-              className="bg-verde pl-5 pr-5 pt-1 pb-1 text-2xl font-bold rounded-3xl tracking-[0.1em] hover:scale-110 transform transition-transform hover:text-white"
+              className={style.button}
               disabled={isButtonDisabled}
             >
               Enviar
             </button>
           </form>
         </div>
-        <div className="w-[1px] h-[calc(90vh-112px)] bg-gray-300"></div>
-        <div className="w-[calc(50%-0.5px)] h-[calc(100vh-112px)] flex flex-col justify-center gap-12">
-        <h1 className="flex ml-[4.5rem] mr-auto text-6xl relative after:content-[''] after:block after:w-full after:h-[2px] after:bg-[#17EB26] after:absolute after:bottom-[-2px]">Status da sua SUNBOX</h1>
-          <div className="mt-4 ml-[4.5rem] flex flex-col gap-5">
+        <div className={style.divLinha}></div>
+        <div className={style.divStatus}>
+          <h1 className={style.title}>Status da sua SUNBOX</h1>
+          <div className={style.status}>
             <p>
               <strong>Código-identificador:</strong> {deviceData?.identifier}
             </p>
