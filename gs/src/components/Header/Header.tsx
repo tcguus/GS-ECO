@@ -3,16 +3,36 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaUserCircle } from "react-icons/fa";
+import { IoMenu } from "react-icons/io5";
+import { useState, useEffect } from "react";
+import style from "../../app/styles/Header.module.css";
 
 export default function Header() {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <header className="text-verde  flex w-full h-14 items-center justify-between">
-      <h1 className="font-bold text-4xl ml-4">Eco+</h1>
-      <nav className="flex text-black list-none gap-10">
+    <header className={style.header}>
+      <h1 className={style.eco}>Eco+</h1>
+      <nav className={style.nav}>
         <li
-          className={`transform transition-transform hover:scale-110 ${
+          className={`${style.liHome} ${
             pathname === "/" ? "text-verde underline" : ""
           }`}
         >
@@ -21,7 +41,7 @@ export default function Header() {
           </Link>
         </li>
         <li
-          className={`transform transition-transform hover:text-verde hover:scale-110 ${
+          className={`${style.li} ${
             pathname === "/compras" ? "text-verde underline" : ""
           }`}
         >
@@ -30,7 +50,7 @@ export default function Header() {
           </Link>
         </li>
         <li
-          className={`transform transition-transform hover:text-verde hover:scale-110 ${
+          className={`${style.li} ${
             pathname === "/sunbox" ? "text-verde underline" : ""
           }`}
         >
@@ -39,7 +59,7 @@ export default function Header() {
           </Link>
         </li>
         <li
-          className={`transform transition-transform hover:text-verde hover:scale-110 ${
+          className={`${style.li} ${
             pathname === "/integrantes" ? "text-verde underline" : ""
           }`}
         >
@@ -48,7 +68,52 @@ export default function Header() {
           </Link>
         </li>
       </nav>
-      <button className="flex items-center gap-2 border-2 border-verde pl-2 pr-2 rounded-xl mr-4 h-8">
+      <div className={style.menuContainer}>
+        <IoMenu className={style.menuIcon} onClick={toggleMenu} />
+        {isMenuOpen && (
+          <div className={style.dropdownMenu}>
+            <ul>
+              <li
+                className={`${style.liHome} ${
+                  pathname === "/" ? style.active : ""
+                }`}
+              >
+                <Link href="/" rel="noopener noreferrer">
+                  Home
+                </Link>
+              </li>
+              <li
+                className={`${style.li} ${
+                  pathname === "/compras" ? style.active : ""
+                }`}
+              >
+                <Link href="/compras" rel="noopener noreferrer">
+                  Compras
+                </Link>
+              </li>
+              <li
+                className={`${style.li} ${
+                  pathname === "/sunbox" ? style.active : ""
+                }`}
+              >
+                <Link href="/sunbox" rel="noopener noreferrer">
+                  Minha SUNBOX
+                </Link>
+              </li>
+              <li
+                className={`${style.li} ${
+                  pathname === "/integrantes" ? style.active : ""
+                }`}
+              >
+                <Link href="/integrantes" rel="noopener noreferrer">
+                  Integrantes
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
+      </div>
+      <button className={style.button}>
         <FaUserCircle /> Login
       </button>
     </header>
