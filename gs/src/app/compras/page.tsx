@@ -98,7 +98,7 @@ export default function Compras() {
             src={boxDetails[selectedBox].imageSrc}
             width="900"
             height="750"
-            alt={Id SunBox ${selectedBox}}
+            alt="Id SunBox ${selectedBox}"
             className={styles.image}
           />
           <div className={styles.sizes}>
