@@ -17,12 +17,19 @@
   margin-left: 5rem;
   margin-bottom: 0.5rem;
 }
+.precoTop {
+  margin-left: 5rem;
+}
 .sunbox {
   width: 100%;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.titleInfo {
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 .image {
   margin-top: 3.5rem;
@@ -36,6 +43,11 @@
   gap: 2rem;
   align-items: flex-start;
   left: 0;
+}
+.preco {
+  margin-left: 20px;
+  font-weight: 300;
+  font-size: 0.875rem;
 }
 .size {
   padding-left: 0.5rem;
@@ -66,6 +78,9 @@
   padding-bottom: 1rem;
   border-radius: 0.5rem;
   width: 17rem;
+}
+.confira {
+  font-size: 0.875rem;
 }
 .arrowDown {
   position: absolute;
@@ -158,4 +173,148 @@
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 1300px) {
+  .image {
+    width: 700px;
+  }
+  .novo {
+    margin-left: 3rem;
+  }
+  .title {
+    margin-left: 3rem;
+  }
+  .precoTop {
+    margin-left: 3rem;
+  }
+}
+@media (max-width: 1080px) {
+  .image {
+    width: 500px;
+  }
+  .size {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+  }
+  .moreInfo {
+    font-size: 1rem;
+  }
+  .confira {
+    font-size: 0.65rem;
+  }
+  .infoText {
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+  .moreInfo {
+    width: 14.5rem;
+  }
+  .novo {
+    margin-left: 2rem;
+  }
+  .title {
+    margin-left: 2rem;
+  }
+  .precoTop {
+    margin-left: 2rem;
+  }
+  .sizes {
+    gap: 1.5rem;
+    margin-left: 3rem;
+  }
+}
+@media (max-width: 990px) {
+  .divInfo {
+    flex-direction: column;
+    align-items: start;
+    padding-left: 2rem;
+  }
+  .divInfo {
+    height: 40rem;
+  }
+}
+@media (max-width: 800px) {
+  .image {
+    width: 400px;
+  }
+  .size {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .moreInfo {
+    font-size: 0.8rem;
+  }
+  .infoText {
+    font-weight: 500;
+    font-size: 0.7rem;
+  }
+  .moreInfo {
+    width: 12rem;
+  }
+  .novo {
+    margin-left: 1rem;
+  }
+  .title {
+    margin-left: 1rem;
+  }
+  .precoTop {
+    margin-left: 1rem;
+  }
+  .sizes {
+    gap: 1rem;
+    margin-left: 2rem;
+  }
+  .preco {
+    font-size: 0.65rem;
+  }
+  .title {
+    font-size: 1.75rem;
+  }
+}
+@media (max-width: 682px) {
+  .desc {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 650px) {
+  .sunbox {
+    flex-direction: column;
+    align-items: start;
+  }
+  .novo {
+    margin-top: 2rem;
+  }
+  .image {
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+  .sizes {
+    margin-top: 2rem;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .infos {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 552px) {
+  .infos {
+    margin-right: 1rem;
+  }
+  .titleInfo {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 460px) {
+  .image {
+    width: 300px;
+  }
+}
+@media (max-width: 360px) {
+  .image {
+    width: 270px;
+  }
 }

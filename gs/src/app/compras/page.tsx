@@ -92,7 +92,7 @@ export default function Compras() {
       <div className={styles.container}>
         <h2 className={styles.novo}>Novo</h2>
         <h1 className={styles.title}>{boxDetails[selectedBox].title}</h1>
-        <p className="ml-20">R$ {boxDetails[selectedBox].price}</p>
+        <p className={styles.precoTop}>R$ {boxDetails[selectedBox].price}</p>
         <div className={styles.sunbox}>
           <Image
             src={boxDetails[selectedBox].imageSrc}
@@ -110,7 +110,7 @@ export default function Compras() {
               }`}
               onClick={() => setSelectedBox("P")}
             >
-              SUNBOX P <p className="ml-20 font-light text-sm">Por R$1.499</p>
+              SUNBOX P <p className={styles.preco}>Por R$1.499</p>
             </button>
             <button
               className={`${styles.size} ${
@@ -120,7 +120,7 @@ export default function Compras() {
               }`}
               onClick={() => setSelectedBox("M")}
             >
-              SUNBOX M <p className="ml-20 font-light text-sm">Por R$3.699</p>
+              SUNBOX M <p className={styles.preco}>Por R$3.699</p>
             </button>
             <button
               className={`${styles.size} ${
@@ -130,13 +130,13 @@ export default function Compras() {
               }`}
               onClick={() => setSelectedBox("G")}
             >
-              SUNBOX G <p className="ml-20 font-light text-sm">Por R$9.499</p>
+              SUNBOX G <p className={styles.preco}>Por R$9.499</p>
             </button>
             <div className={styles.moreInfo}>
-              <p className="font-medium">
+              <p className={styles.infoText}>
                 Quer saber mais informações <br /> da SUNBOX?
               </p>
-              <p className="text-sm">Confira mais detalhes abaixo!</p>
+              <p className={styles.confira}>Confira mais detalhes abaixo!</p>
               <IoIosArrowDown
                 className={styles.arrowDown}
                 onClick={handleScrollToCompra}
@@ -144,39 +144,36 @@ export default function Compras() {
             </div>
           </div>
         </div>
-        <div
-          id="compra"
-          className={styles.divInfo}
-        >
+        <div id="compra" className={styles.divInfo}>
           <div className={styles.infos}>
             {selectedBox === "P" && (
               <div>
-                <h1 className="font-semibold text-2xl">
+                <h1 className={styles.titleInfo}>
                   Mais informações sobre a SUNBOX P
                 </h1>
-                <p>
+                <p className={styles.desc}>
                   <span className="font-semibold">- Dimensões:</span> o tamanho
                   P é o mais compacto da linha SUNBOX, tendo 35cm de largura{" "}
                   <br /> e 45cm de altura.
                 </p>
-                <p>
+                <p className={styles.desc}>
                   <span className="font-semibold">- Peso:</span> 8kg, leve e
                   portátil.
                 </p>
-                <p>
+                <p className={styles.desc}>
                   <span className="font-semibold">- Painel solar:</span> 100W
                 </p>
-                <p>
+                <p className={styles.desc}>
                   <span className="font-semibold">
                     - Capacidade da bateria:
                   </span>{" "}
                   500Wh
                 </p>
-                <p>
+                <p className={styles.desc}>
                   <span className="font-semibold">- Ideal para:</span> carregar
                   celulares e pequenos dispositivos elétricos.
                 </p>
-                <p>
+                <p className={styles.desc}>
                   <span className="font-semibold">- Saídas de energia:</span>{" "}
                   <br /> - 4 portas USB <br />- 2 portas UBS-C <br />- 2 tomadas
                   bivolt
@@ -185,33 +182,33 @@ export default function Compras() {
             )}
             {selectedBox === "M" && (
               <div>
-                <h1 className="font-semibold text-2xl">
+                <h1 className={styles.titleInfo}>
                   Mais informações sobre a SUNBOX M
                 </h1>
-                <p>
+                <p className={styles.desc}>
                   <span className="font-semibold">- Dimensões:</span> o tamanho
                   M é o intermediario da linha SUNBOX, tendo 60cm de largura{" "}
                   <br /> e 45cm de altura.
                 </p>
-                <p>
+                <p className={styles.desc}>
                   <span className="font-semibold">- Peso:</span> 13kg, portátil
                   mas com maior capacidade.
                 </p>
-                <p>
+                <p className={styles.desc}>
                   <span className="font-semibold">- Painel solar:</span> 250W
                 </p>
-                <p>
+                <p className={styles.desc}>
                   <span className="font-semibold">
                     - Capacidade da bateria:
                   </span>{" "}
                   1300Wh
                 </p>
-                <p>
+                <p className={styles.desc}>
                   <span className="font-semibold">- Ideal para:</span> carregar
                   laptops, pequenos ventiladores e eletrodomésticos <br /> de
                   baixo consumo.
                 </p>
-                <p>
+                <p className={styles.desc}>
                   <span className="font-semibold">- Saídas de energia:</span>{" "}
                   <br /> - 6 portas USB <br />- 4 portas UBS-C <br />- 4 tomadas
                   bivolt
@@ -220,35 +217,35 @@ export default function Compras() {
             )}
             {selectedBox === "G" && (
               <div>
-                <h1 className="font-semibold text-2xl">
+                <h1 className={styles.titleInfo}>
                   Mais informações sobre a SUNBOX G
                 </h1>
-                <p>
+                <p className={styles.desc}>
                   <span className="font-semibold">- Dimensões:</span> o tamanho
                   G é o maior e mais completo da linha SUNBOX, tendo 95cm de
                   largura
                   <br /> e 70cm de altura.
                 </p>
-                <p>
+                <p className={styles.desc}>
                   <span className="font-semibold">- Peso:</span> 22kg, requer
                   instalação fixa ou semi-fixa.
                 </p>
-                <p>
+                <p className={styles.desc}>
                   <span className="font-semibold">- Painel solar:</span> 500W
                 </p>
-                <p>
+                <p className={styles.desc}>
                   <span className="font-semibold">
                     - Capacidade da bateria:
                   </span>
                   3500Wh
                 </p>
-                <p>
+                <p className={styles.desc}>
                   <span className="font-semibold">- Ideal para:</span> fornecer
                   energia para pequenos sistemas elétricos domésticos, como
                   geladeiras <br /> compactas, TVs maiores e computadores de
                   mesa,
                 </p>
-                <p>
+                <p className={styles.desc}>
                   <span className="font-semibold">- Saídas de energia:</span>
                   <br /> - 8 portas USB <br />- 6 portas UBS-C <br />- 8 tomadas
                   bivolt <br />
@@ -311,7 +308,7 @@ export default function Compras() {
             </p>
             <div>
               <button
-                className={`] ${
+                className={`${styles.button} ${
                   isAnyQuantitySelected ? "bg-verde" : "bg-green-300"
                 } text-white py-2 px-4 rounded`}
                 disabled={!isAnyQuantitySelected}
@@ -401,3 +398,4 @@ export default function Compras() {
     </div>
   );
 }
+0
