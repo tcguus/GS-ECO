@@ -49,7 +49,7 @@ const Home = () => {
               <div className={style.divIcon}>
                 <FaLeaf className={style.icon} />
               </div>
-              <p className="text-2xl">
+              <p className={style.frases}>
                 <span className="font-bold">
                   Sustentabilidade é transformar{" "}
                 </span>
@@ -60,7 +60,7 @@ const Home = () => {
               <div className={style.divIcon}>
                 <IoIosFlash className={style.icon} />
               </div>
-              <p className="text-2xl">
+              <p className={style.frases}>
                 <span className="font-bold">
                   Dispositivos sempre carregados{" "}
                 </span>
@@ -72,7 +72,7 @@ const Home = () => {
               <div className={style.divIcon}>
                 <IoHardwareChip className={style.icon} />
               </div>
-              <p className="text-2xl">
+              <p className={style.frases}>
                 <span className="font-bold">Tecnologia inovadora </span>
                 <br />
                 que gera energia eficiente.
