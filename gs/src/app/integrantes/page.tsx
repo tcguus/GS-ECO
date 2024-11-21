@@ -12,7 +12,7 @@ export default function Integrantes() {
     <div>
       <Header />
       <div className={style.container}>
-        <h1 className="font-bold text-6xl">Conheça os nossos integrantes!</h1>
+        <h1 className={style.title}>Conheça os nossos integrantes!</h1>
         <div className={style.integrantes}>
           <div className={style.integrante}>
             <Image
