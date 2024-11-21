@@ -98,7 +98,7 @@ export default function Sunbox() {
             width="600"
             height="500"
             alt="Id SunBox"
-            className="ml-[4rem]"
+            className={style.image}
           />
           <form onSubmit={handleSubmit} className={style.formulario}>
             <input
