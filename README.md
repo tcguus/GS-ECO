@@ -2,16 +2,16 @@
 
 Eco+ é a criadora da Sunbox, uma solução inovadora e sustentável para geração e uso de energia renovável. A Sunbox é uma caixa portátil equipada com painéis solares integrados, projetada para fornecer energia limpa e eficiente, ideal para áreas remotas, viagens ou emergências. Com múltiplas tomadas e design compacto, ela oferece praticidade e sustentabilidade em qualquer lugar.
 
-##!!IMPORTANTE!!
+## !!IMPORTANTE!!
 
 Para fazer o uso da API, vá no repositorio do projeto, acesse a pasta "backend", dentro desta pasta tem o arquivo chamado "app.py", ao entrar no arquivo rode os seguintes comandos no terminal:
-   1- cd gs
-   2- cs backend
-   3- python app.py
+- 1- cd gs
+- 2- cd backend
+- 3- python app.py
 
 Usuário e senha do SQL Developer:
-   usuário: RM555562
-   senha:150106
+- usuário: RM555562
+- senha:150106
 
 Rode esse comando no SQL Developer:
    select * from users;
@@ -38,7 +38,8 @@ Rode esse comando no SQL Developer:
    https://github.com/tcguus/GS-ECO
 
 ## Link do projeto deployado na Vercel:
-
+https://gs-eco.vercel.app
+gs-eco-git-main-gustavos-projects-c41f931a.vercel.app (Caso o de cima não funcione.)
 
 ## Link do vídeo no YouTube:
   https://www.youtube.com/watch?v=itf_jrRwuQg
