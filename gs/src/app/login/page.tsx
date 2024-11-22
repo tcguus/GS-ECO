@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import styles from "../styles/Login.module.css";
 import { FaLeaf } from "react-icons/fa";
 import { IoIosArrowBack } from "react-icons/io";
@@ -19,6 +20,7 @@ const User = () => {
   const [user, setUser] = useState<UserType | null>(null);
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState<string | null>(null);
+  const router = useRouter();
 
   useEffect(() => {
     const fetchLastUserId = async () => {
@@ -102,7 +104,7 @@ const User = () => {
       setMessage("Conta deletada com sucesso!");
       setTimeout(() => {
         setMessage(null);
-        window.location.reload();
+        router.push("/"); // Redireciona para a página inicial após a exclusão
       }, 2000);
     } catch (error) {
       console.error("Failed to delete user:", error);
@@ -116,9 +118,8 @@ const User = () => {
   return (
     <div className={styles.container}>
       <div className={styles.dados}>
-      <Link href="/"><IoIosArrowBack className={styles.seta}/></Link>
-      
-      <FaLeaf className={styles.leaf} />
+        <Link href="/"><IoIosArrowBack className={styles.seta}/></Link>
+        <FaLeaf className={styles.leaf} />
         <h1 className={styles.atualizar}>Atualizar dados:</h1>
         <form className={styles.formulario}>
           <input
@@ -152,8 +153,8 @@ const User = () => {
             placeholder="Senha"
             onChange={handleChange}
             className={styles.input}
+            required
           />
-          <div></div>
           <button
             className={styles.button}
             type="button"

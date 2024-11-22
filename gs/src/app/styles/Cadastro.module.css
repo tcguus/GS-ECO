@@ -1,0 +1,109 @@
+.title {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 700;
+    background-color: #e8e8e8;
+  }
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8e8e8;
+  }
+  .leaf {
+    color: #17eb26;
+    font-size: 2rem;
+  }
+  .dados {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 1rem 4rem;
+    align-items: center;
+    min-width: auto;
+    gap: 1rem;
+    border-radius: 10px;
+    position: relative;
+  }
+  .seta{
+      position: absolute;
+      top: 14px;
+      left: 10px;
+      color: #000;
+      font-size: 1.5rem;
+      transition: 0.3s;  
+  }
+  .seta:hover{
+      color: #17eb26;
+      transform: scale(1.2);
+  }
+  .insira{
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  .input {
+    border: 1px solid #000000;
+    padding: 0.5rem;
+    border-radius: 10px;
+    transition: 0.2s;
+  }
+  .input:focus {
+    border: 1.5px solid #17eb26;
+    outline: none;
+  }
+  .button {
+    font-weight: 700;
+    border-radius: 10px;
+    display: flex;
+    margin-top: 0.4rem;
+    padding: 0.5rem;
+    justify-content: center;
+    background-color: #17eb26;
+    transition: 0.3s;
+    width: 7rem;
+    align-self: center;
+  }
+  .button:hover {
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    font-weight: 700;
+  }
+  
+  .modalContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  @media (max-width: 365px){
+      .dados{
+          padding: 1rem 2.5rem;
+      }
+  }
