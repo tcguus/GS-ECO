@@ -52,7 +52,9 @@ const Register = () => {
   return (
     <div className={styles.container}>
       <div className={styles.dados}>
-        <Link href="/"><IoIosArrowBack className={styles.seta}/></Link>
+        <Link href="/">
+          <IoIosArrowBack className={styles.seta} />
+        </Link>
         <FaLeaf className={styles.leaf} />
         <h1 className={styles.insira}>Insira seus dados:</h1>
         <form className={styles.formulario} onSubmit={handleSubmit}>

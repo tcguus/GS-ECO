@@ -31,17 +31,17 @@
   border-radius: 10px;
   position: relative;
 }
-.seta{
-    position: absolute;
-    top: 14px;
-    left: 10px;
-    color: #000;
-    font-size: 1.5rem;
-    transition: 0.3s;  
+.seta {
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  color: #000;
+  font-size: 1.5rem;
+  transition: 0.3s;
 }
-.seta:hover{
-    color: #17eb26;
-    transform: scale(1.2);
+.seta:hover {
+  color: #17eb26;
+  transform: scale(1.2);
 }
 .atualizar {
   font-size: 1.5rem;
@@ -102,8 +102,8 @@
   font-weight: 700;
 }
 
-@media (max-width: 365px){
-    .dados{
-        padding: 1rem 2.5rem;
-    }
+@media (max-width: 365px) {
+  .dados {
+    padding: 1rem 2.5rem;
+  }
 }

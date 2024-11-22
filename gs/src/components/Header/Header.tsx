@@ -32,14 +32,14 @@ export default function Header() {
   useEffect(() => {
     const fetchLastUserName = async () => {
       try {
-        const response = await fetch('http://localhost:5000/users/last');
+        const response = await fetch("http://localhost:5000/users/last");
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error("Network response was not ok");
         }
         const data = await response.json();
         setLastUserName(data.name);
       } catch (error) {
-        console.error('Failed to fetch last user name:', error);
+        console.error("Failed to fetch last user name:", error);
       }
     };
     fetchLastUserName();
@@ -49,9 +49,9 @@ export default function Header() {
 
   const handleButtonClick = () => {
     if (lastUserName) {
-      router.push('/login');
+      router.push("/login");
     } else {
-      router.push('/login/cadastro');
+      router.push("/login/cadastro");
     }
   };
 
@@ -142,7 +142,7 @@ export default function Header() {
         )}
       </div>
       <button className={style.button} onClick={handleButtonClick}>
-        <FaUserCircle /> {lastUserName ? lastUserName : 'Usuário'}
+        <FaUserCircle /> {lastUserName ? lastUserName : "Usuário"}
       </button>
     </header>
   );

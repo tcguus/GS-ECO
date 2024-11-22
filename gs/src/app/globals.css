@@ -2,17 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #FAFAFA;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
 }
 
 .underline {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 
 .border-verde {
-    border-color: #17EB26;
-  }
+  border-color: #17eb26;
+}

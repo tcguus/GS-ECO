@@ -51,7 +51,7 @@
   left: 0;
   gap: 1rem;
 }
-.image{
+.image {
   margin-left: 4.5rem;
 }
 .text {
@@ -127,67 +127,67 @@
   flex-direction: column;
   gap: 1.25rem;
 }
-@media (max-width:1616px){
+@media (max-width: 1616px) {
   .text {
     width: 40rem;
   }
 }
-@media (max-width:1460px){
+@media (max-width: 1460px) {
   .text {
     width: 35rem;
   }
-  .image{
+  .image {
     width: 400px;
   }
-  .title{
+  .title {
     font-size: 2.9rem;
   }
 }
-@media (max-width:1240px){
+@media (max-width: 1240px) {
   .text {
     width: 30rem;
     margin-left: 3rem;
   }
-  .image{
+  .image {
     width: 350px;
     margin-left: 3rem;
   }
-  .title{
+  .title {
     font-size: 2.5rem;
     margin-left: 3rem;
   }
-  .status{
+  .status {
     margin-left: 3rem;
   }
-  .formulario{
+  .formulario {
     margin-left: 3rem;
   }
 }
-@media (max-width:1060px){
-  .text{
+@media (max-width: 1060px) {
+  .text {
     width: 20rem;
     font-size: 0.9rem;
   }
-  .button{
+  .button {
     font-size: 1.2rem;
   }
-  .title{
+  .title {
     font-size: 2.1rem;
   }
 }
-@media (max-width:828px){
-  .cont{
+@media (max-width: 828px) {
+  .cont {
     flex-direction: column;
     align-items: start;
   }
-  .divId{
+  .divId {
     width: 100%;
     height: auto;
     margin-left: 0;
     align-items: start;
     margin-top: 4rem;
   }
-  .divStatus{
+  .divStatus {
     width: 100%;
     height: auto;
     margin-left: 0;
@@ -195,45 +195,45 @@
     margin-top: 4rem;
     margin-bottom: 4rem;
   }
-  .text{
+  .text {
     width: 35rem;
   }
-  .divLinha{
+  .divLinha {
     display: none;
   }
 }
-@media (max-width:636px){
-  .text{
+@media (max-width: 636px) {
+  .text {
     width: 22rem;
   }
 }
-@media (max-width:436px){
-  .divStatus{
+@media (max-width: 436px) {
+  .divStatus {
     margin-top: 2rem;
     gap: 1rem;
   }
-  .text{
+  .text {
     width: 18rem;
     margin-left: 1.5rem;
   }
-  .formulario{
+  .formulario {
     margin-left: 1.5rem;
   }
-  .image{
+  .image {
     width: 275px;
     margin-left: 1.5rem;
   }
-  .title{
+  .title {
     font-size: 1.8rem;
     margin-left: 1.5rem;
   }
-  .status{
+  .status {
     margin-right: 1rem;
     margin-left: 1.5rem;
   }
 }
-@media (max-width:358px){
-  .title{
+@media (max-width: 358px) {
+  .title {
     font-size: 1.5rem;
   }
 }

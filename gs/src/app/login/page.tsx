@@ -104,7 +104,7 @@ const User = () => {
       setMessage("Conta deletada com sucesso!");
       setTimeout(() => {
         setMessage(null);
-        router.push("/"); // Redireciona para a página inicial após a exclusão
+        router.push("/");
       }, 2000);
     } catch (error) {
       console.error("Failed to delete user:", error);
@@ -118,7 +118,9 @@ const User = () => {
   return (
     <div className={styles.container}>
       <div className={styles.dados}>
-        <Link href="/"><IoIosArrowBack className={styles.seta}/></Link>
+        <Link href="/">
+          <IoIosArrowBack className={styles.seta} />
+        </Link>
         <FaLeaf className={styles.leaf} />
         <h1 className={styles.atualizar}>Atualizar dados:</h1>
         <form className={styles.formulario}>
