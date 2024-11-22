@@ -38,8 +38,8 @@ Rode esse comando no SQL Developer:
    https://github.com/tcguus/GS-ECO
 
 ## Link do projeto deployado na Vercel:
-https://gs-eco.vercel.app
-gs-eco-git-main-gustavos-projects-c41f931a.vercel.app (Caso o de cima não funcione.)
+- https://gs-eco.vercel.app
+- gs-eco-git-main-gustavos-projects-c41f931a.vercel.app (Caso o de cima não funcione.)
 
 ## Link do vídeo no YouTube:
   https://www.youtube.com/watch?v=itf_jrRwuQg
