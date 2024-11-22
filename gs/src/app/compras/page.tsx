@@ -398,4 +398,3 @@ export default function Compras() {
     </div>
   );
 }
-0;
