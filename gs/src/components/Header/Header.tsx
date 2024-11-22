@@ -6,10 +6,12 @@ import { FaUserCircle } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
 import { useState, useEffect } from "react";
 import style from "../../app/styles/Header.module.css";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [lastUserName, setLastUserName] = useState<string | null>(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,6 +27,32 @@ export default function Header() {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  useEffect(() => {
+    const fetchLastUserName = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/users/last');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setLastUserName(data.name);
+      } catch (error) {
+        console.error('Failed to fetch last user name:', error);
+      }
+    };
+    fetchLastUserName();
+  }, []);
+
+  const router = useRouter();
+
+  const handleButtonClick = () => {
+    if (lastUserName) {
+      router.push('/login');
+    } else {
+      router.push('/login/cadastro');
+    }
   };
 
   return (
@@ -113,8 +141,8 @@ export default function Header() {
           </div>
         )}
       </div>
-      <button className={style.button}>
-        <FaUserCircle /> Login
+      <button className={style.button} onClick={handleButtonClick}>
+        <FaUserCircle /> {lastUserName ? lastUserName : 'Usuário'}
       </button>
     </header>
   );
